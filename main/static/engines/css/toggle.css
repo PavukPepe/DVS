@@ -1,0 +1,129 @@
+@import url("../css/root.css");
+.toggle {
+    cursor: pointer;
+    display: inline-block;
+  }
+  
+  .toggle-switch {
+    display: inline-block;
+    background: #ccc;
+    border-radius: 16px;
+    width: 58px;
+    height: 32px;
+    position: relative;
+    vertical-align: middle;
+    transition: background 0.25s;
+  }
+  .toggle-switch:before, .toggle-switch:after {
+    content: "";
+  }
+  .toggle-switch:before {
+    display: block;
+    background: linear-gradient(to bottom, #fff 0%, #eee 100%);
+    border-radius: 50%;
+    box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.25);
+    width: 24px;
+    height: 24px;
+    position: absolute;
+    top: 4px;
+    left: 4px;
+    transition: left 0.25s;
+  }
+  .toggle:hover .toggle-switch:before {
+    background: linear-gradient(to bottom, #fff 0%, #fff 100%);
+    box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.5);
+  }
+  .toggle-checkbox:checked + .toggle-switch {
+    background: var(--accent-color);
+  }
+  .toggle-checkbox:checked + .toggle-switch:before {
+    left: 30px;
+  }
+  
+  .toggle-checkbox {
+    position: absolute;
+    visibility: hidden;
+  }
+  
+  .toggle-label {
+    margin-left: 5px;
+    position: relative;
+    top: 2px;
+    font-size: 15px;
+  }
+  @media only screen and (max-width: 479px) {
+    .toggle {
+        font-size: 12px;
+    }
+    .toggle-switch {
+        width: 48px;
+        height: 26px;
+    }
+}
+
+/* Экраны от 480px до 599px */
+@media only screen and (min-width: 480px) and (max-width: 599px) {
+    .toggle {
+        font-size: 14px;
+    }
+    .toggle-switch {
+        width: 54px;
+        height: 30px;
+    }
+}
+
+/* Экраны от 600px до 767px */
+@media only screen and (min-width: 600px) and (max-width: 767px) {
+    .toggle {
+        font-size: 16px;
+    }
+    .toggle-switch {
+        width: 58px;
+        height: 32px;
+    }
+}
+
+/* Экраны от 768px до 959px */
+@media only screen and (min-width: 768px) and (max-width: 959px) {
+    .toggle {
+        font-size: 18px;
+    }
+}
+
+/* Экраны от 960px до 1199px */
+@media only screen and (min-width: 960px) and (max-width: 1199px) {
+    .toggle {
+        font-size: 20px;
+    }
+}
+
+/* Экраны от 1200px до 1439px */
+@media only screen and (min-width: 1200px) and (max-width: 1439px) {
+    .toggle {
+        font-size: 22px;
+    }
+    .toggle-label {
+        font-weight: bold;
+    }
+}
+
+/* Экраны от 1440px до 1679px */
+@media only screen and (min-width: 1440px) and (max-width: 1679px) {
+    .toggle {
+        font-size: 24px;
+    }
+}
+
+/* Экраны от 1680px до 1919px */
+@media only screen and (min-width: 1680px) and (max-width: 1919px) {
+    .toggle {
+        font-size: 26px;
+    }
+}
+
+/* Экраны от 1920px и более */
+@media only screen and (min-width: 1920px) {
+    .toggle {
+        font-size: 28px;
+    }
+}

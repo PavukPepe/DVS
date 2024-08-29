@@ -1,0 +1,21 @@
+@import url("../css/root.css");
+body .container-fluid {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: var(--main-nav);
+  border-radius: 20px;
+  padding: 40px;
+}
+body .container-fluid h1 {
+  font-size: 48px;
+  color: white;
+  font-family: var(--font-family-exo2);
+}
+body .container-fluid p {
+  font-size: 30px;
+  color: white;
+  font-family: var(--font-family-exo2);
+  line-height: 35px;
+}/*# sourceMappingURL=about.css.map */
