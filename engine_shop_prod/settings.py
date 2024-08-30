@@ -85,7 +85,7 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',  # Указываем движок для MySQL
         'NAME': 'f0801189_dvs',           # Имя вашей БД
-        'USER': ' f0801189_dvs',                 # Имя пользователя
+        'USER': 'f0801189_dvs',                 # Имя пользователя
         'PASSWORD': '20332035',             # Пароль
         'HOST': 'localhost',                     # Обычно 'localhost'
         'PORT': '3306',                          # Порт MySQL по умолчанию
