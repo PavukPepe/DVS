@@ -1,5 +1,5 @@
 ﻿asgiref==3.8.1
-Django==4.2.15
+Django==4.1.10
 mysqlclient==2.2.4
 pillow==10.4.0
 PyMySQL==1.1.1
