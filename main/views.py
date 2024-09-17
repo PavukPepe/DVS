@@ -66,11 +66,12 @@ def index(request):
             'brands': brands,
             'models': models,
             'generations': generations}
-        print("EEEEEEEEEEEEEE")
         phone = request.POST.get('phone')
         engine = request.POST.get('engine')
+        name = request.POST.get('name')
+        print(engine, name, phone)
         # Создание экземпляра Order и сохранение в базе данных
-        new_order = OrderEngine(engine=engine, phone=phone)
+        new_order = OrderEngine(engine=engine, phone=phone, name=name)
         new_order.save()
         # Возвращаем ответ о успешном создании заказа
         return render(request, 'index.html', context=context)

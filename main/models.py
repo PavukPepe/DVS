@@ -2,7 +2,7 @@ from django.db import models
 
 class CarBrand(models.Model):
     name = models.CharField(max_length=100, verbose_name="Название")
-    logo = models.ImageField(upload_to='car_logos/')
+    # logo = models.ImageField(upload_to='car_logos/')
 
     def __str__(self):
         return self.name
@@ -43,6 +43,7 @@ class Engine(models.Model):
     condition = models.CharField(max_length=50, choices=[('Новый', 'Новый'), ('Б/у', 'Б/у')], verbose_name="Состояние")
     price = models.FloatField(default=0, verbose_name="Цена")
     price_order = models.FloatField(default=0, verbose_name="Цена под заказ")
+    description = models.TextField(default='')
 
     def __str__(self):
         return f"{self.name} - {', '.join([str(gen) for gen in self.generations.all()])}hp"
@@ -55,6 +56,7 @@ class Engine(models.Model):
 class OrderEngine(models.Model):
     engine = models.CharField(max_length=100, verbose_name="Двигатель")
     phone = models.CharField(max_length=15, verbose_name="Номер телефона")
+    name = models.CharField(verbose_name="Имя заказчика", max_length=100, default="")
     status = models.BooleanField(default=False)
 
     class Meta:

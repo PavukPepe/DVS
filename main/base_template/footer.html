@@ -1,19 +1,36 @@
 {% load static %}
 
-<footer>
-    <div class="footer__content">
-        <ul>
-            <li>ИП ЛЕПИНСКИХ СЕРГЕЙ АНДРЕЕВИЧ</li>
-            <li>Каталог</li>
-            <li>О нас</li>
-            <li>Договор</li>
-            <li>Для сервисов</li>
-            <li>Все права защищены</li>
-        </ul>
-        <ul class="footer__contact">
-            <li class="telegram">Телеграм канал</li>
-            <li class="mail">Почта</li>
-            <li class="tel">Телефон</li>
-        </ul>
-    </div>
-</footer>
+		<footer  class="mt-4">
+			<div class="container p-5">
+				<div class="row py-5 p-0 m-0">
+					<ul class="col-lg-3 p-0 order-lg-1 order-2">
+<a class="nav-link" href="/">Каталог</a>
+                        <a class="nav-link" href="/about">О нас</a>
+                        <a class="nav-link" href="#">Для сервисов</a>
+                        <a class="nav-link" href="#">Договор</a>
+						<li>Все права защищены</li>
+					</ul>
+					<ul class="col-lg-9 p-0 m-0 order-1 order-lg-2">
+						<li class="telegram d-flex" style="align-items: center">
+							<img src="{%  static "engines/source/telegram-ico.svg"%}" alt="#"
+                /><span class="mx-3"
+								>Телеграм канал</span
+							>
+						</li>
+						<li class="mail d-flex" style="align-items: center">
+							<img src="{%  static "engines/source/mail-footer.svg"%}" alt="#"
+                /><span
+								class="mx-3 my-4"
+								>Почта</span
+							>
+						</li>
+						<li class="tel d-flex" style="align-items: center">
+							<img src="{%  static "engines/source/tel-footer.svg"%}" alt="#"
+                /><span class="mx-3"
+								><a href="tel:89951342383">8-995-134-23-83</a></span
+							>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</footer>

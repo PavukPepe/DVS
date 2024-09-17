@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-9xamn1dn%9jr&7*$ig@x^4v#kz_a0dis7$f&cl_u)4feqazua#
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ["nogaev.ru", "https://nogaev.ru/", "http://nogaev.ru/"]
+ALLOWED_HOSTS = ["nogaev.ru", "https://nogaev.ru/", "http://nogaev.ru/", "127.0.0.1"]
 
 
 # Application definition
@@ -73,24 +73,23 @@ WSGI_APPLICATION = 'engine_shop_prod.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/5.0/ref/settings/#databases
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
+    }
+}
 
 # DATABASES = {
 #     'default': {
-#         'ENGINE': 'django.db.backends.sqlite3',
-#         'NAME': BASE_DIR / 'db.sqlite3',
+#         'ENGINE': 'django.db.backends.mysql',  # Указываем движок для MySQL
+#         'NAME': 'f0801189_dvs',           # Имя вашей БД
+#         'USER': 'f0801189_dvs',                 # Имя пользователя
+#         'PASSWORD': '20332035',             # Пароль
+#         'HOST': 'localhost',                     # Обычно 'localhost'
+#         'PORT': '3306',                          # Порт MySQL по умолчанию
 #     }
 # }
-
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.mysql',  # Указываем движок для MySQL
-        'NAME': 'f0801189_dvs',           # Имя вашей БД
-        'USER': 'f0801189_dvs',                 # Имя пользователя
-        'PASSWORD': '20332035',             # Пароль
-        'HOST': 'localhost',                     # Обычно 'localhost'
-        'PORT': '3306',                          # Порт MySQL по умолчанию
-    }
-}
 
 
 # Password validation

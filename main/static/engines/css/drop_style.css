@@ -4,10 +4,6 @@
     border: 0;
 }
 
-a{
-    color: #FFFFFF;
-    text-decoration: none;
-}
 :before,
 *:after {
     -moz-box-sizing: border-box;

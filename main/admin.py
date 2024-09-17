@@ -11,7 +11,10 @@ class EngineAdmin(admin.ModelAdmin):
     ordering = ('name',)
     fieldsets = (
         (None, {
-            'fields': ('name', 'photo', 'fuel_type', 'volume', 'state_of_origin', 'condition')
+            'fields': ('name', 'photo', 'description')
+        }),
+        ('Хар-ки', {
+            'fields': ('fuel_type', 'volume', 'state_of_origin', 'condition')
         }),
         ('Цены', {
             'fields': ('price', 'price_order')
@@ -21,12 +24,11 @@ class EngineAdmin(admin.ModelAdmin):
         }),
     )
 
-
 admin.site.register(Engine, EngineAdmin)
 
 
 class CarBrandAdmin(admin.ModelAdmin):
-    list_display = ('name', 'logo_preview')
+    list_display = ('name',)
     search_fields = ('name',)
     ordering = ('name',)
 
@@ -70,9 +72,9 @@ admin.site.register(CarModel, CarModelAdmin)
 
 @admin.register(OrderEngine)
 class OrderEngineAdmin(admin.ModelAdmin):
-    list_display = ('engine', 'phone', 'status')  # Поля, которые вы хотите видеть в списке
+    list_display = ('engine', 'phone', 'name', 'status')  # Поля, которые вы хотите видеть в списке
     search_fields = ('engine', 'phone')            # Поисковые поля
     list_filter = ('status',)                       # Фильтрация по статусу
     ordering = ('-id',)
-
+    list_editable = ('status',)
 

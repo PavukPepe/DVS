@@ -1,27 +1,38 @@
 {% load static %}
-
-<header>
-    <div class="top-nav container-fluid"></div>
-    <div class="main-nav container-fluid">
-        <nav class="container">
-            <a class="logo" href="{% url 'index' %}"><img src="{% static 'engines/source/logo.svg' %}" alt="#"/></a>
-            <ul>
-                <li><a href="{% url 'index' %}">Каталог</a></li>
-                <li><a href="{% url 'about' %}">О нас</a></li>
-                <li>Договор</li>
-                <li><a href="{% url 'about' %}">Для сервисов</a></li>
-                <ul class="contact-header-list">
-                    <li><img src="{% static 'engines/source/mail.svg' %}" alt="#"/></li>
-                    <li><img src="{% static 'engines/source/telegram.svg' %}" alt="#"/></li>
-                    <li><img src="{% static 'engines/source/vk.svg' %}" alt="#"/></li>
-                </ul>
-                <li>
-                    <button class="advice-button">Консультация</button>
-                </li>
-            </ul>
-            <div class="work-data">
-                <p class="contact-tel">8-800-555-35-35</p>
-                <p class="contact-time">Пн-Вс 8.00-21.00</p>
+<header class="sticky-top">
+    <div class="container p-0">
+        <nav class="navbar navbar-expand-lg navbar-light">
+            <div class="container-fluid" id="nav">
+                <a class="navbar-brand col-2" href="#"
+                ><img src="/static/engines/source/new-logo.svg" alt="#"
+                /></a>
+                <button
+                        class="navbar-toggler"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#navbarNavAltMarkup"
+                        aria-controls="navbarNavAltMarkup"
+                        aria-expanded="false"
+                        aria-label="Переключатель навигации"
+                >
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                    <div
+                            class="navbar-nav w-100 justify-content-lg-between col-10 align-items-lg-center p-4 p-lg-1"
+                    >
+                        <a class="nav-link" href="/">Каталог</a>
+                        <a class="nav-link" href="/about">О нас</a>
+                        <a class="nav-link" href="#">Для сервисов</a>
+                        <a class="nav-link" href="#">Договор</a>
+                        <a href="https://www.avito.ru/brands/f54c01044089536a251a5958a04737b1/all/zapchasti_i_aksessuary?gdlkerfdnwq=101&page_from=from_item_card_icon&iid=4046142384&sellerId=ea26a345364195da1d3f5f8903c8fc59"><img src="{% static '/engines/source/Avito_logo.svg' %}" alt=""></a>
+                        <button class="px-5 my-2 py-lg-0">Консультация</button>
+                        <div>
+                            <p class="contact-tel my-2"><a href="tel:89951342383">8-995-134-23-83</a></p>
+                            <p class="contact-time">Пн-Вс 8.00-21.00</p>
+                        </div>
+                    </div>
+                </div>
             </div>
         </nav>
     </div>
