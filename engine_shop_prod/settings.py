@@ -73,23 +73,23 @@ WSGI_APPLICATION = 'engine_shop_prod.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/5.0/ref/settings/#databases
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
-    }
-}
-
 # DATABASES = {
 #     'default': {
-#         'ENGINE': 'django.db.backends.mysql',  # Указываем движок для MySQL
-#         'NAME': 'f0801189_dvs',           # Имя вашей БД
-#         'USER': 'f0801189_dvs',                 # Имя пользователя
-#         'PASSWORD': '20332035',             # Пароль
-#         'HOST': 'localhost',                     # Обычно 'localhost'
-#         'PORT': '3306',                          # Порт MySQL по умолчанию
+#         'ENGINE': 'django.db.backends.sqlite3',
+#         'NAME': BASE_DIR / 'db.sqlite3',
 #     }
 # }
+
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.mysql',  # Указываем движок для MySQL
+        'NAME': 'u2826806_engine_shop',           # Имя вашей БД
+        'USER': 'u2826806_admin',                 # Имя пользователя
+        'PASSWORD': 'Kluch_za_12$',             # Пароль
+        'HOST': 'localhost',                     # Обычно 'localhost'
+        'PORT': '3306',                          # Порт MySQL по умолчанию
+    }
+}
 
 
 # Password validation
